@@ -1,0 +1,46 @@
+/**
+ * Summary objects.
+ */
+
+.o-summary {
+  @include clearfix();
+  @include make-sm-column(6, 0);
+
+  @media (min-width: 1024px) {
+    padding-right: 18px;
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+}
+
+.o-summary-header {
+  @include clearfix();
+  position: relative;
+
+  padding: 25px;
+
+  @media (max-width: 460px) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.o-summary-headerId {
+  position: relative;
+  display: block;
+
+  color: $fontColor--secondary;
+}
+
+.o-summary-headerTitle {
+  position: relative;
+
+  display: block;
+  float: left;
+
+  font-size: $fontSize--headingMain;
+
+  color: $fontColor--primary;
+}

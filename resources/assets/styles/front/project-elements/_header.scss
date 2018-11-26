@@ -1,0 +1,390 @@
+.navbar-default {
+  z-index: 1;
+
+  padding: 0 60px;
+  margin-bottom: 0;
+
+  min-height: 70px;
+
+  background-color: #fff;
+
+  border-color: $borderColor--gray;
+
+  @media (max-width: 460px) {
+    padding: 0 15px;
+  }
+
+  .navbar-toggle {
+    margin-right: 0;
+  }
+
+  li {
+    @media (max-width: 460px) {
+      display: inline-block;
+    }
+  }
+
+  li > a {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .navbar-nav {
+    @media (max-width: 460px) {
+      text-align: center;
+    }
+  }
+
+  .navbar-header {
+    @media (min-width: 768px) and (max-width: 1024px) {
+      position: relative;
+      top: 15px;
+    }
+  }
+}
+
+.navbar-brand {
+  width: 36px;
+  height: 36px;
+
+  padding: 0;
+
+  @media (min-width: 1024px) {
+    position: absolute;
+    top: 50%;
+
+    transform: translateY(-50%);
+  }
+
+  @media (max-width: 460px) {
+    margin-top: 8px;
+  }
+}
+
+.navbar-buttonGroup {
+  position: relative;
+
+  @media (min-width: 1024px) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .dropdown-menu {
+    width: 100%;
+
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    border: 1px solid $borderColor--gray;
+    border-radius: 0;
+
+    li {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.navbar-button {
+  position: relative;
+  width: 420px;
+  height: 70px;
+
+  padding: 24px 35px;
+
+  color: $fontColor--navigationButton;
+
+  text-align: left;
+  text-transform: uppercase;
+
+  font-weight: bold;
+
+  outline: 0;
+  background: $backgroundColor--navigationButton;
+
+  border: 1px solid $borderColor--gray;
+  border-bottom: none;
+  border-radius: 0;
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    display: block;
+
+    float: left;
+
+    left: 40px;
+
+    width: 320px;
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 35px;
+
+    width: 16px;
+    height: 16px;
+
+    content: "";
+
+    background-image: url("../images/icons/menu.png");
+    transform: translateY(-50%);
+
+    transition: transform .2s;
+  }
+
+  @media(max-width: 460px) {
+    width: 100%;
+  }
+
+  &:hover {
+    &:after {
+      transform: translateY(-50%) rotate(90deg);
+    }
+  }
+}
+
+.navbar-nav-link {
+  position: relative;
+
+  &::after {
+    position: relative;
+    display: block;
+  }
+}
+
+.navbar-nav-link--help {
+  &::after {
+    width: 20px;
+    height: 20px;
+
+    content: "";
+
+    background-image: url("../images/icons/help.png");
+  }
+}
+
+.navbar-nav-link--help {
+  &::after {
+    width: 20px;
+    height: 20px;
+
+    content: "";
+
+    background-image: url("../images/icons/help.png");
+  }
+}
+
+.navbar-nav-link--dashboard {
+  &::after {
+    width: 22px;
+    height: 19px;
+
+    content: "";
+
+    background-image: url("../images/icons/dashboard.png");
+  }
+}
+
+.navbar-nav-link--calendar {
+  &::after {
+    width: 18px;
+    height: 20px;
+
+    content: "";
+
+    background-image: url("../images/icons/calendar.png");
+  }
+}
+
+.navbar-nav-link--notification {
+  &::after {
+    width: 19px;
+    height: 22px;
+
+    content: "";
+
+    background-image: url("../images/icons/notification.png");
+  }
+}
+
+.navbar-nav-link--user {
+  &::after {
+    width: 20px;
+    height: 20px;
+
+    content: "";
+
+    background-image: url("../images/icons/user.png");
+  }
+}
+
+.navbar-secondary {
+  min-height: 60px;
+
+  margin-bottom: 0;
+
+  z-index: 0;
+  border-bottom: 1px solid $borderColor--gray;
+  background-color: #fff;
+
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+
+  @media (max-width: 767px) {
+    transform: translateY(-100%);
+  }
+
+  .navbar-nav {
+    position: relative;
+
+    width: 100%;
+    min-height: 60px;
+
+    text-align: center;
+
+    @media (max-width: 460px) {
+      border: none;
+
+      margin: 0;
+    }
+
+    li {
+      top: -2px;
+
+      display: inline-block;
+      float: none;
+
+      @media (max-width: 460px) {
+        display: block;
+        float: left;
+
+        width: 100%;
+      }
+
+      a {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  .collapse {
+    &.in {
+      padding: 0;
+      transform: translateY(100%);
+    }
+  }
+}
+
+.navbar-nav--secondary {
+   .navbar-nav-link {
+     position: relative;
+
+     padding-left: 35px;
+     padding-right: 35px;
+
+     color: $fontColor--navigationSecondary;
+
+     &::before {
+       position: absolute;
+       top: 50%;
+       left: 25px;
+
+       transform: translateY(-50%);
+     }
+
+      &::after {
+        position: absolute;
+        right: 0;
+        bottom: -3px;
+        left: 0;
+
+        margin: 0 auto;
+
+        height: 4px;
+        width: 0;
+
+        content: "";
+
+        background-color: #2962ff;
+
+        transition: width .2s;
+      }
+
+      &:hover,
+      &.is-active {
+        background-color: #fff;
+
+        &::after {
+          width: 100%;
+        }
+      }
+   }
+
+   .navbar-nav-link--summary {
+     padding-left: 82px;
+
+     &::before {
+       width: 22px;
+       height: 22px;
+
+       content: "";
+
+       background-image: url("../images/icons/summary.png");
+     }
+   }
+
+   .navbar-nav-link--enrolment {
+     padding-left: 77px;
+
+     &::before {
+       width: 17px;
+       height: 24px;
+
+       content: "";
+
+       background-image: url("../images/icons/enrolment.png");
+     }
+   }
+
+   .navbar-nav-link--communication {
+     padding-left: 84px;
+
+     &::before {
+       width: 24px;
+       height: 24px;
+
+       content: "";
+
+       background-image: url("../images/icons/communication.png");
+     }
+   }
+
+   .navbar-nav-link--finance {
+     padding-left: 79px;
+
+     &::before {
+       width: 19px;
+       height: 24px;
+
+       content: "";
+
+       background-image: url("../images/icons/finance.png");
+     }
+   }
+
+   .navbar-nav-link--files {
+     padding-left: 82px;
+
+     &::before {
+       width: 22px;
+       height: 24px;
+
+       content: "";
+
+       background-image: url("../images/icons/files.png");
+     }
+   }
+}

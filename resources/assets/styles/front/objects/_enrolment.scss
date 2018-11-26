@@ -1,0 +1,125 @@
+/**
+ * Summary objects.
+ */
+
+.o-enrolment {
+  @include clearfix();
+  @include make-sm-column(6, 0);
+
+  @media (min-width: 1024px) {
+    padding-left: 18px;
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+}
+.enrolment-dataRow {
+  background: #eee;
+  margin-bottom: 0 !important;
+
+  @media (max-width: 1024px) {
+    padding-top: 20px;
+  }
+
+  .c-card-dataContent {
+    width: 100%;
+    padding: 15px 0;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    @media (max-width: 460px) {
+      text-align: center;
+    }
+  }
+}
+
+.enrolment-dataTitle {
+  position: relative;
+  z-index: 1;
+}
+
+.enrolment-dataColumn {
+  position: relative;
+
+  .u-valignText {
+    top: 13px;
+
+    @media (max-width: 460px) {
+      top: 0;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    left: 0;
+    width: 101%;
+    height: 23px;
+
+    background: #fff;
+
+    content: "";
+
+    @media (max-width: 460px) {
+      background: transparent;
+    }
+  }
+}
+
+.o-enrolment-header {
+  @include clearfix();
+  position: relative;
+
+  padding: 10px 25px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+
+  background: $backgroundColor--archiveEnrolment;
+
+  @media (max-width: 460px) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.o-enrolment-headerTitle {
+    position: relative;
+    display: block;
+    float: left;
+
+    margin-top: 6px;
+
+    font-size: $fontSize--headingMain;
+    color: $fontColor--primary;
+}
+
+.o-enrolment-buttons {
+ float: right;
+
+ @media (max-width: 767px) {
+   float: none;
+ }
+}
+
+.enrolment-attendancePrecentage {
+  display: block;
+  font-size: 18px;
+  color: #8dc63f; //green
+}
+
+.enrolment-attendanceClassCount {
+  display: block;
+  font-size: 10px;
+  font-weight: normal;
+}
+
+.enrolment-classDay {
+  display: block;
+}
+
+.enrolment-classTime {
+  display: block;
+  font-size: 10px;
+  font-weight: normal;
+}

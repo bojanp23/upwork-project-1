@@ -1,0 +1,87 @@
+.c-badge {
+  position: relative;
+
+  display: block;
+  float: left;
+
+  padding: 5px 15px;
+  margin-left: 15px;
+
+  font-size: $fontSize--sm;
+  font-weight: bold;
+
+  color: #fff;
+
+  text-transform: uppercase;
+
+  border-radius: 25px;
+
+  @media (max-width: 767px) {
+    top: -18px;
+    margin-left: 0;
+  }
+}
+
+.c-badge--enrolled {
+  background-color: #8dc63f; //green
+}
+
+.c-badge--trial {
+  background-color: #cfd8dc; //gray
+}
+
+.c-badge--reserved {
+  background-color: #fbaf5d; //orange
+}
+
+.c-badge--full {
+  background-color: #4d73db; //blue
+}
+
+.c-progressBadge {
+  position: relative;
+  top: 8px;
+
+  display: block;
+  float: left;
+
+  padding: 5px 15px;
+  margin-left: 15px;
+
+  font-size: $fontSize--sm;
+
+  color: #fff;
+
+  border-radius: 5px;
+
+  @media (max-width: 767px) {
+    top: 0;
+    float: none;
+    width: 150px;
+    margin: 0 auto;
+  }
+}
+
+.c-progressBadge--committed {
+  background-color: #8dc63f; //green
+}
+
+.c-progressBadge--uncommitted {
+  background-color: #f2707f; //red
+}
+
+.c-badge--notification {
+  position: absolute;
+  top: -9px;
+  right: -9px;
+
+  width: 19px;
+  height: 19px;
+
+  padding: 2px 0;
+
+  background: #ed1c24; //red
+
+  border-radius: 100%;
+  border: 1px solid #fff;
+}

@@ -1,0 +1,201 @@
+/**
+ * Layout styles.
+ */
+
+ body,
+ html {
+   height: 100%;
+   min-height: 100%;
+
+    font-size: $fontSize;
+
+   background-color: $backgroundColor--grayLight;
+ }
+
+ .container--large {
+   width: 100%;
+   padding: 0 200px;
+
+   @media (max-width: 768px) {
+     padding: 0;
+   }
+ }
+
+.container--full {
+  width: 100%;
+  padding: 0 36px;
+}
+
+.u-paddingRight {
+  padding-right: 13px;
+
+  @media (max-width: 1024px) {
+    padding-right: 0;
+  }
+}
+
+.u-paddingLeft {
+  padding-left: 13px;
+
+  @media (max-width: 1024px) {
+    padding-left: 0;
+  }
+}
+
+.u-noMargin {
+  margin: 0;
+}
+
+.u-textCentered {
+  text-align: center;
+}
+
+.u-paddings {
+  padding: 15px 0;
+}
+
+.login-wrap {
+  @include make-md-column(7, 280px);
+
+  height: 100%;
+
+  padding-top: 250px;
+  padding-bottom: 250px;
+
+  background-image: url("../images/bg_login.jpg");
+  background-size: cover;
+  background-position: center center;
+
+  @media (max-width: 1600px) {
+    padding:200px 30px;
+  }
+
+  @media (max-width: 1024px) {
+    padding:100px 30px;
+  }
+ }
+
+ .login-footer {
+   @include clearfix();
+   position: absolute;
+   bottom: 100px;
+
+   width: 100%;
+
+   @media (max-width: 1024px) {
+    position: relative;
+   }
+
+   .column-left {
+     @include make-md-column(7, 280px);
+
+     @media (max-width: 1024px) {
+       padding-left: 15px;
+       padding-right: 15px;
+       text-align: center;
+       margin-bottom: 25px;
+     }
+
+     ul {
+       padding: 0;
+       margin: 0;
+
+       li {
+         position: relative;
+         display: inline-block;
+         margin-right: 30px;
+
+         &:first-child {
+           &::before {
+             display: none;
+           }
+         }
+
+         &::before {
+           position: absolute;
+           left: -18px;
+           top: 8px;
+           width: 4px;
+           height: 4px;
+           content: "";
+           background-color: #fff;
+           border-radius: 100%;
+         }
+
+         a {
+           color: #fff;
+           transition: color .2s;
+
+           @media (max-width: 1024px) {
+             color: #9e9e9e;
+           }
+
+           &:hover {
+             color: #9e9e9e;
+             text-decoration: none;
+           }
+         }
+       }
+     }
+   }
+
+   .column-right {
+      @include make-md-column(5, 300px);
+      text-align: center;
+      color: #9e9e9e;
+      font-size: 12px;
+      text-transform: uppercase;
+
+      @media (max-width: 1024px) {
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+        margin-bottom: 25px;
+      }
+   }
+ }
+
+.login-company-name {
+  display: block;
+  margin-bottom: 30px;
+
+  font-size: 38px;
+
+  font-weight: bold;
+
+  color: #fff;
+}
+
+.login-title {
+  font-size: 48px;
+  color: #fff;
+  margin: 0;
+  font-weight: normal;
+}
+
+.login-button {
+  width: 100%;
+  text-align: center;
+
+  margin-bottom: 40px;
+
+  box-shadow: 0 6px 12px rgba($fontColor--primary, 0.175);
+}
+
+.login-forgotPassword {
+  display: block;
+
+  font-size: 14px;
+
+  color: #e0e0e0;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  transition: color .2s;
+
+  &:hover {
+    text-decoration: none;
+    color: #4d73db;
+  }
+}
